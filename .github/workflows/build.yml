@@ -1,19 +1,19 @@
 name: Build
 on:
-  push:
+  push: # Runs the workflow when someone pushes to a repository branch, which triggers the push event.
     branches:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-jobs:
+jobs: # A workflow run is made up of one or more jobs. Jobs run in parallel by default.
   build:
     name: Build
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: ubuntu-latest # The type of machine to run the job on. The machine can be either a GitHub-hosted runner, or a self-hosted runner.
+    steps: # A job contains a sequence of tasks called steps. Steps can run commands, run setup tasks, or run an action in your repository
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Set up JDK 11
+      - name: Set up JDK 11 # A name for the step to display on GitHub
         uses: actions/setup-java@v1
         with:
           java-version: 11 # The JDK version to make available on the path.
