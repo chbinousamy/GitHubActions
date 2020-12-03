@@ -1,3 +1,10 @@
+### Each directory and file, which starts with dot
+.*
+### But not Git ignore/hub and Travis file
+!.gitignore
+!.github
+!.travis.yml
+
 # Compiled class file
 *.class
 
@@ -21,3 +28,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+### IntelliJ Idea
+#.idea/
+*.iml
+*.ipr
+*.iws
+
+### Eclipse
+.settings/
+.classpath
+.project
+
+### Maven
+target/
