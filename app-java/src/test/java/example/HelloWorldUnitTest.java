@@ -22,7 +22,7 @@ public class HelloWorldUnitTest {
         assertThat(result, equalTo("five"));
     }
 
-    /*
+    
     // Comment or uncomment this code for code coverage demo purposes 
     @Test
     public void testGetAllWordsToIncreaseCoverage() {
@@ -35,7 +35,7 @@ public class HelloWorldUnitTest {
         assertThat(new HelloWorld().getWords(8), equalTo("eight"));
         assertThat(new HelloWorld().getWords(9), equalTo("nine"));
         assertThat(new HelloWorld().getWords(1000), equalTo("lots"));
-    }
-    */
+    
+    
 
 }
