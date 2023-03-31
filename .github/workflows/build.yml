@@ -30,5 +30,6 @@ jobs: # A workflow run is made up of one or more jobs. Jobs run in parallel by d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # GitHub repo - Settings - Secrets - Secrets are environment variables that are encrypted.
-        run: mvn -e clean install org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.organization=${{ env.SONAR_ORG }} -Dsonar.projectKey=${{ env.SONAR_ORG }}_${{ env.SONAR_PRJKEY }}
+        run: echo ${{ env.SONAR_ORG }}_${{ env.SONAR_PRJKEY }
+        #run: mvn -e clean install org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.organization=${{ env.SONAR_ORG }} -Dsonar.projectKey=${{ env.SONAR_ORG }}_${{ env.SONAR_PRJKEY }}
         
